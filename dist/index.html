@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <input id="teamName" type="text">
+        <bottun>GET ROSTER</bottun>
+        <div id="viewPlayers">
+        </div>
+    </div>
+    <script id="teamPlayers-template" type="text/x-handlebars-template">
+     {{#each players}}
+    <div class="player">
+        <div class="playerName">{{name}}</div>
+        <div class="playerjerseyNum">{{jerseyNum}}</div>
+        <img src="{{urlImage}}" rel="player-pic">
+        <div class="playerPosition">{{position}}</div>
+    </div>
+     {{/each}}
+    </script>
+
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
